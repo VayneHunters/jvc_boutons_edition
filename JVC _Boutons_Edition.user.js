@@ -24,7 +24,7 @@
         if (!buttonsEditor || !textarea) return;
 
         // Centrage
-        buttonsEditor.style.margin = '10px auto';
+        buttonsEditor.style.margin = 'auto';
         buttonsEditor.style.width = 'fit-content';
 
         // Vérifie si le déplacement est vraiment nécessaire
