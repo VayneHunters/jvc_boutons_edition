@@ -21,7 +21,7 @@
         risibank.parentNode.insertBefore(buttonsEditor, risibank.nextSibling);
 
         // Centrage via style inline
-        buttonsEditor.style.margin = '10px auto';
+        buttonsEditor.style.margin = 'auto';
         buttonsEditor.style.width = 'fit-content';
     }
 
