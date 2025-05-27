@@ -3,7 +3,7 @@
 // @namespace    https://www.jeuxvideo.com/
 // @version      1.8
 // @description  Place et centre la barre d'édition au dessus de la zone de texte
-// @author       ChatGPT (Newgoblin2 JVC)
+// @author       ChatGPT, Newgoblin2, StrangerFruit
 // @match        https://www.jeuxvideo.com/forums/*
 // @icon         https://www.jeuxvideo.com/favicon.ico
 // @license      MIT
