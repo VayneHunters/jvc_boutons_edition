@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         JV.com : Boutons d'édition au dessus de la zone de texte
 // @namespace    https://www.jeuxvideo.com/
-// @version      1.8
+// @version      2.0
 // @description  Place et centre la barre d'édition au dessus de la zone de texte
-// @author       ChatGPT, Newgoblin2, StrangerFruit
+// @author       ChatGPT, Newgoblin2, StrangerFruit, Shiho-Miyano
 // @match        https://www.jeuxvideo.com/forums/*
 // @icon         https://www.jeuxvideo.com/favicon.ico
 // @license      MIT
