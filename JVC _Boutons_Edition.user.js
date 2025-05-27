@@ -17,15 +17,22 @@
     let debounceTimer = null;
 
     function moveButtonsEditor() {
-        const buttonsEditor = document.querySelector('.buttonsEditor');
+        //Remontage du bloc en entier Sinon on perd le bouton
+        const buttonsEditor = document.querySelector('.messageEditor__buttonEdit');
+
+        const buttonEdit = document.querySelector('.buttonsEditor');
         const risibank = document.querySelector('#risibank-container');
         const textarea = document.querySelector('#message_topic');
 
         if (!buttonsEditor || !textarea) return;
 
+        //Switch Barre bas CSS
+        buttonsEditor.style.borderTop = 'none';
+        buttonsEditor.style.borderBottom = '0.0625rem solid var(--jv-border-color)';
+
         // Centrage
-        buttonsEditor.style.margin = 'auto';
-        buttonsEditor.style.width = 'fit-content';
+        buttonEdit.style.margin = 'auto';
+        buttonEdit.style.width = 'fit-content';
 
         // Vérifie si le déplacement est vraiment nécessaire
         const isUnderRisi = risibank && risibank.nextSibling === buttonsEditor;
