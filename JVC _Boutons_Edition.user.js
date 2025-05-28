@@ -1,13 +1,16 @@
 // ==UserScript==
 // @name         JV.com : Boutons d'édition au dessus de la zone de texte
 // @namespace    https://www.jeuxvideo.com/
-// @version      2.0
+// @version      2.2
 // @description  Place et centre la barre d'édition au dessus de la zone de texte
 // @author       ChatGPT, Newgoblin2, StrangerFruit, Shiho-Miyano
 // @match        https://www.jeuxvideo.com/forums/*
+// @match        https://www.jeuxvideo.com/messages-prives/*
 // @icon         https://www.jeuxvideo.com/favicon.ico
 // @license      MIT
 // @grant        none
+// @downloadURL  https://github.com/VayneHunters/jvc_boutons_edition/raw/main/JVC%20_Boutons_Edition.user.js
+// @updateURL    https://github.com/VayneHunters/jvc_boutons_edition/raw/main/JVC%20_Boutons_Edition.user.js
 // @run-at       document-end
 // ==/UserScript==
 
@@ -22,7 +25,14 @@
 
         const buttonEdit = document.querySelector('.buttonsEditor');
         const risibank = document.querySelector('#risibank-container');
-        const textarea = document.querySelector('#message_topic');
+
+        //Detection_MP
+        let textarea
+        if (window.location.href.indexOf("jeuxvideo.com/messages-prives/") > -1) {
+            textarea = document.querySelector('#message');
+        } else {
+            textarea = document.querySelector('#message_topic');
+        }
 
         if (!buttonsEditor || !textarea) return;
 
@@ -57,7 +67,15 @@
 
     function init() {
         const editor = document.querySelector('.buttonsEditor');
-        const textarea = document.querySelector('#message_topic');
+
+        //Detection_MP
+        let textarea
+        if (window.location.href.indexOf("jeuxvideo.com/messages-prives/") > -1) {
+            textarea = document.querySelector('#message');
+        } else {
+            textarea = document.querySelector('#message_topic');
+        }
+
         if (!editor || !textarea) {
             setTimeout(init, 300);
             return;
@@ -66,7 +84,13 @@
         moveButtonsEditor();
 
         // Observer les mutations DOM dans l'éditeur (notamment quand on clique sur le bouton RisiBank)
-        const container = document.querySelector('#forums-post-message-editor');
+        let container
+        if (window.location.href.indexOf("jeuxvideo.com/messages-prives/") > -1) {
+            container = document.querySelector('.jv-editor')
+        } else {
+            container = document.querySelector('#forums-post-message-editor');
+        }
+
         if (container) {
             const observer = new MutationObserver(debouncedMove);
             observer.observe(container, {
