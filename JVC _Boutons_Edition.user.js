@@ -3,7 +3,7 @@
 // @namespace    https://www.jeuxvideo.com/
 // @version      2.3
 // @description  Place et centre la barre d'édition au dessus de la zone de texte
-// @author       ChatGPT, Newgoblin2, StrangerFruit, Shiho-Miyano
+// @author       ChatGPT, Newgoblin2, StrangerFruit, Shiho-Miyano (fix du bouton risibank + passage du code en CSS, grand merci à lui pour son aide, la majorité du code est de lui désormais)
 // @match        https://www.jeuxvideo.com/forums/*
 // @match        https://www.jeuxvideo.com/messages-prives/*
 // @icon         https://www.jeuxvideo.com/favicon.ico
