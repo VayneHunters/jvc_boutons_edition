@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         JV.com : Boutons d'édition au dessus de la zone de texte
 // @namespace    https://www.jeuxvideo.com/
-// @version      2.3
+// @version      2.4
 // @description  Place et centre la barre d'édition au dessus de la zone de texte
 // @author       ChatGPT, Newgoblin2, StrangerFruit, Shiho-Miyano (fix du bouton risibank + passage du code en CSS, grand merci à lui pour son aide, la majorité du code est de lui désormais)
 // @match        https://www.jeuxvideo.com/forums/*
@@ -35,8 +35,7 @@ function moveButtonsEditor() {
     }
 
     /*Switch bloc en bas*/
-    #message_topic,
-    #message {
+    .messageEditor__edit {
         order: 2;
     }
 
